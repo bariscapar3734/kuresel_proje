@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'file_utils.dart';
+import '../../../file_utils.dart';
 
 class dosya_islemi extends StatefulWidget {
   dosya_islemi() : super();
@@ -16,11 +16,6 @@ class _dosya_islemiState extends State<dosya_islemi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Dosya İşlemim"),
-        centerTitle: true,
-        backgroundColor: Colors.green,
-      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[

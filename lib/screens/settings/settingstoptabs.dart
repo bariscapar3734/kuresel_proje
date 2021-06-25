@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:kureselproje_app/screens/settings/settings_contents/setting_OneTabs.dart';
+import 'package:kureselproje_app/screens/settings/settings_contents/setting_TwoTabs.dart';
 
 class MusicTopTabs extends StatefulWidget {
   int colorVal;
@@ -15,7 +16,7 @@ class _MusicTopTabsState extends State<MusicTopTabs>
   @override
   void initState() {
     super.initState();
-    _tabController = new TabController(vsync: this, length: 1);
+    _tabController = new TabController(vsync: this, length: 2);
     _tabController.addListener(_handleTabSelection);
   }
 
@@ -28,7 +29,7 @@ class _MusicTopTabsState extends State<MusicTopTabs>
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 1,
+      length: 2,
       child: Scaffold(
         appBar: AppBar(
           toolbarHeight: 80,
@@ -50,6 +51,17 @@ class _MusicTopTabsState extends State<MusicTopTabs>
                             ? Color(widget.colorVal)
                             : Colors.grey)),
               ),
+              Tab(
+                icon: Icon(FontAwesomeIcons.compass,
+                    color: _tabController.index == 1
+                        ? Color(widget.colorVal)
+                        : Colors.grey),
+                child: Text('Dosya Ekleme ve Okuma',
+                    style: TextStyle(
+                        color: _tabController.index == 1
+                            ? Color(widget.colorVal)
+                            : Colors.grey)),
+              ),
             ],
           ),
         ),
@@ -57,6 +69,7 @@ class _MusicTopTabsState extends State<MusicTopTabs>
           controller: _tabController,
           children: <Widget>[
             Home(),
+            dosya_islemi(),
           ],
         ),
       ),
