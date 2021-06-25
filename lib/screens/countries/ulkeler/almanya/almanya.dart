@@ -15,7 +15,8 @@ class _almanyaState extends State<almanya> {
   Widget build(BuildContext context) {
     return Ulke_detay_scaffold(
       appbartitle: "Amerika Birleşik Devletleri",
-      appbarimage: "assets/images/flags/amerika.jpg",
+      appbarimage:
+          "https://firebasestorage.googleapis.com/v0/b/kureselproje-final.appspot.com/o/flags%2Famerika.jpg?alt=media&token=95f70103-005b-4af3-b5e1-101dadcea682",
       itemcountlenght: almanya_sayfasi.length,
       kisabilgitext: almanya_sayfasi[index].bilgitext,
       kita: almanya_sayfasi[index].bulundugukita,

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:kureselproje_app/screens/aboutUs/bookstoptabs.dart';
 import 'package:kureselproje_app/screens/countries/countrytoptabs.dart';
-import 'package:kureselproje_app/screens/settings/musictoptabs.dart';
+import 'package:kureselproje_app/screens/settings/settingstoptabs.dart';
 import 'homePage/hometoptabs.dart';
 
 class homePage_duzen extends StatefulWidget {

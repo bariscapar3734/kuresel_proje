@@ -159,7 +159,7 @@ class _Ulke_detay_scaffoldState extends State<Ulke_detay_scaffold> {
                   ),
                 ],
               ),
-              child: Image.asset(
+              child: Image.network(
                 widget.appbarimage,
                 fit: BoxFit.cover,
                 width: 60,
@@ -186,7 +186,7 @@ class _Ulke_detay_scaffoldState extends State<Ulke_detay_scaffold> {
                         elevation: 20.0,
                         child: Center(
                           child: InkWell(
-                            child: Image.asset(widget.appbarimage),
+                            child: Image.network(widget.appbarimage),
                           ),
                         ),
                       ),

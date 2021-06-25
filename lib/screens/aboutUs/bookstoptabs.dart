@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:kureselproje_app/screens/aboutUs/aboutUs_contents/aboutUs_OneTabs.dart';
+import 'package:kureselproje_app/screens/aboutUs/aboutUs_contents/aboutUs_ThreeTabs.dart';
+import 'package:kureselproje_app/screens/aboutUs/aboutUs_contents/aboutUs_TwoTabs.dart';
 
 class BooksTopTabs extends StatefulWidget {
   int colorVal;
@@ -14,7 +17,7 @@ class _BooksTopTabsState extends State<BooksTopTabs>
   @override
   void initState() {
     super.initState();
-    _tabController = new TabController(vsync: this, length: 7);
+    _tabController = new TabController(vsync: this, length: 3);
     _tabController.addListener(_handleTabSelection);
   }
 
@@ -27,7 +30,7 @@ class _BooksTopTabsState extends State<BooksTopTabs>
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 6,
+      length: 3,
       child: Scaffold(
         appBar: AppBar(
           toolbarHeight: 90,
@@ -43,7 +46,7 @@ class _BooksTopTabsState extends State<BooksTopTabs>
                     color: _tabController.index == 0
                         ? Color(widget.colorVal)
                         : Colors.grey),
-                child: Text('Ebooks',
+                child: Text('Hakkımızda',
                     style: TextStyle(
                         color: _tabController.index == 0
                             ? Color(widget.colorVal)
@@ -54,7 +57,7 @@ class _BooksTopTabsState extends State<BooksTopTabs>
                     color: _tabController.index == 1
                         ? Color(widget.colorVal)
                         : Colors.grey),
-                child: Text('Audiobooks',
+                child: Text('Misyon',
                     style: TextStyle(
                         color: _tabController.index == 1
                             ? Color(widget.colorVal)
@@ -65,58 +68,22 @@ class _BooksTopTabsState extends State<BooksTopTabs>
                     color: _tabController.index == 2
                         ? Color(widget.colorVal)
                         : Colors.grey),
-                child: Text('Comic',
+                child: Text('Vizyon',
                     style: TextStyle(
                         color: _tabController.index == 2
                             ? Color(widget.colorVal)
                             : Colors.grey)),
               ),
-              Tab(
-                icon: Icon(FontAwesomeIcons.shapes,
-                    color: _tabController.index == 3
-                        ? Color(widget.colorVal)
-                        : Colors.grey),
-                child: Text('Genres',
-                    style: TextStyle(
-                        color: _tabController.index == 3
-                            ? Color(widget.colorVal)
-                            : Colors.grey)),
-              ),
-              Tab(
-                icon: Icon(FontAwesomeIcons.solidStar,
-                    color: _tabController.index == 4
-                        ? Color(widget.colorVal)
-                        : Colors.grey),
-                child: Text('TopSelling',
-                    style: TextStyle(
-                        color: _tabController.index == 4
-                            ? Color(widget.colorVal)
-                            : Colors.grey)),
-              ),
-              Tab(
-                icon: Icon(FontAwesomeIcons.solidBookmark,
-                    color: _tabController.index == 5
-                        ? Color(widget.colorVal)
-                        : Colors.grey),
-                child: Text('New Releases',
-                    style: TextStyle(
-                        color: _tabController.index == 5
-                            ? Color(widget.colorVal)
-                            : Colors.grey)),
-              ),
-              Tab(
-                icon: Icon(FontAwesomeIcons.chartBar,
-                    color: _tabController.index == 6
-                        ? Color(widget.colorVal)
-                        : Colors.grey),
-                child: Text('Top Free',
-                    style: TextStyle(
-                        color: _tabController.index == 6
-                            ? Color(widget.colorVal)
-                            : Colors.grey)),
-              ),
             ],
           ),
+        ),
+        body: TabBarView(
+          controller: _tabController,
+          children: <Widget>[
+            Hakkimizda(),
+            Misyon(),
+            Vizyon(),
+          ],
         ),
       ),
     );

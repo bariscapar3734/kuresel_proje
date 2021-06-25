@@ -1,3 +1,4 @@
+import 'package:kureselproje_app/api/views/api_views.dart';
 import 'package:kureselproje_app/screens/anasayfa_routes/en_iyi_bolge_kategori/asya_askeri_gucleri.dart';
 import 'package:kureselproje_app/screens/anasayfa_routes/en_iyi_bolge_kategori/asya_pasifik_gucleri.dart';
 import 'package:kureselproje_app/screens/anasayfa_routes/en_iyi_bolge_kategori/avrupa_birli%C4%9Fi.dart';
@@ -9,7 +10,7 @@ List<bolgekategoriler> bolgekategoriler_oneTabs = [
     avrupa_birligi(),
   ),
   bolgekategoriler(
-    ortadoguGuc(),
+    OrtaDogu(),
   ),
   bolgekategoriler(
     perisan_korfezi(),
