@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "278216659012",
+    "project_id": "kureselproje-final",
+    "storage_bucket": "kureselproje-final.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:278216659012:android:0af4f05a6a43e7a9932c11",
+        "android_client_info": {
+          "package_name": "com.example.kureselproje_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "278216659012-dc37b3fp0p636gknsaote6ckis4enopu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZR2_IIu4b9acLUx_hg5GnnvqITRTcuz4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "278216659012-dc37b3fp0p636gknsaote6ckis4enopu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
